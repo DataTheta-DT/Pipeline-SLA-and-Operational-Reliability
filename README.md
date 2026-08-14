@@ -1,5 +1,4 @@
-# Pipeline-SLA-and-Operational-Reliability
-## Databricks Job Monitoring
+# Databricks Job Monitoring
 
 Monitors a set of dependent Databricks workflows, checks whether each
 data layer (Bronze, Gold, ...) completed its daily refresh within
@@ -22,6 +21,15 @@ dependency for a layer has completed.
    completed, and hasn't already been notified about today.
 7. Logs every run and every notification to Unity Catalog tables for
    history/audit.
+
+## Sample notification
+
+Once a data layer's dependencies have all completed successfully,
+`job_monitoring_main.py` sends an HTML success email similar to the
+one below. Sender and recipient identities have been redacted from
+this sample screenshot.
+
+![Sample success notification email with SLA status table, sender and recipient names redacted](email_notification_example.png)
 
 ## Prerequisites
 

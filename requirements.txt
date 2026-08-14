@@ -1,0 +1,4 @@
+# Databricks clusters already provide pyspark, pandas, and requests.
+# This file lists the extra packages this project needs that are
+# NOT preinstalled on a standard Databricks Runtime cluster.
+arrow>=1.2.3
